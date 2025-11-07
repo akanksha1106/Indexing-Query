@@ -73,7 +73,7 @@ CREATE TABLE employees (
    
 Added realistic data for departments and employees to simulate a working environment.
 
-4. Tested Original Query (Unoptimized)
+3. Tested Original Query (Unoptimized)
    
 Executed a query joining both tables and filtering by hire date — it was slow because no indexes were used.
 
@@ -87,7 +87,7 @@ WHERE e.hire_date BETWEEN '2024-01-01' AND '2024-12-31'
 
 ORDER BY e.salary DESC;
 
-6. Created Indexes
+4. Created Indexes
    
 Optimized performance by adding indexes on frequently searched or joined columns.
 
@@ -95,13 +95,13 @@ CREATE INDEX idx_hire_date ON employees(hire_date);
 
 CREATE INDEX idx_dept_id ON employees(dept_id);
 
-8. Re-tested Query (Optimized)
+5. Re-tested Query (Optimized)
    
 Ran the same query again — it executed much faster.
 
 Used EXPLAIN to verify the difference in query plans.
 
-10. Analyzed Performance
+6. Analyzed Performance
     
 Compared:
 
@@ -119,18 +119,3 @@ Each includes screenshots, query comparisons, and conclusions.
 
 
 
-
-✅ Outcome
-
-
-Query performance improved by ~21×.
-
-
-Learned how to identify slow queries and fix them using indexes.
-
-
-Built a clear, reproducible example of SQL performance tuning.
-
-
-
-Would you like me to generate this README as a PDF or Markdown (.md) file for download?
